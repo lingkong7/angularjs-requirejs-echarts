@@ -1,11 +1,11 @@
 require([
-  'app',
-  'routes'
-],
-function(app){
+        'app',
+        'routes'
+    ],
+    function (app) {
 
-  // Bootstrap application
-  app.bootstrap();
+        // Bootstrap application
+        app.bootstrap();
 
-});
+    });
 

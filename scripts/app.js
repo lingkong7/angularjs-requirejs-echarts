@@ -2,41 +2,43 @@
  * loads sub modules and wraps them up into the main module
  */
 define([
-  'domReady',
-  'angular',
-  'angular-route',
+    'domReady',
+    'angular',
+    'angular-route',
 
-  'services/services',
+    'services/services',
 
-  'controllers/controllers',
-  'controllers/pie-controller',
-  'directives/directives',
+    'controllers/controllers',
+    'controllers/pie-controller',
+    'directives/directives',
 
-  'directives/barChart-directive',
-  'directives/pieChart-directive',
+    'directives/barChart-directive',
+    'directives/pieChart-directive',
 
 
-  'services/pie-service'
+    'services/echart-service'
 
 ], function (domReady, ng) {
-  'use strict';
+    'use strict';
 
-  var app = ng.module('app', [
-    'ngRoute',
-    'app.controllers',
-    'app.directives',
-    'app.services'
-  ]);
+    var app = ng.module('app', [
+        'ngRoute',
+        'app.controllers',
+        'app.directives',
+        'app.services'
+    ]);
 
-  // Kickstart application
-  function bootstrap(){
-    domReady(function (document) {
-      ng.bootstrap(document, ['app']);
-    });
-  }
+    // Kickstart application
+    function bootstrap() {
+        domReady(function (document) {
+            ng.bootstrap(document, ['app']);
+        });
+    }
 
-  return {
-    bootstrap: bootstrap,
-    getNgModule: function(){ return app; }
-  };
+    return {
+        bootstrap: bootstrap,
+        getNgModule: function () {
+            return app;
+        }
+    };
 });
