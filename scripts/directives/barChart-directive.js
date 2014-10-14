@@ -4,7 +4,7 @@ define([
     'echarts/chart/bar'
 ], function (directives, echarts, barChart) {
     'use strict';
-    directives.directive('barChart', [function () {
+    directives.directive('barChart', ['echartService',function (echartService) {
 
         return {
             restrict: 'E',

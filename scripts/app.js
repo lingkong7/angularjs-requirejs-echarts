@@ -28,7 +28,6 @@ define([
         'app.services'
     ]);
 
-    // Kickstart application
     function bootstrap() {
         domReady(function (document) {
             ng.bootstrap(document, ['app']);
