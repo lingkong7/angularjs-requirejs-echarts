@@ -26,3 +26,5 @@ requirejs.config({
         'bootstrap': ['jquery']
     }
 });
+
+requirejs(["main"])
