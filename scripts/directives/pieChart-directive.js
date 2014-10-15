@@ -14,6 +14,7 @@ define([
                 "options": "="
             },
             link: function (scope, element,attrs) {
+
                 //设置饼图高度
                 element[0].style.height = attrs.height + "px";
 
@@ -22,7 +23,10 @@ define([
 
                 //监听options变化
                 scope.$watch('options', function () {
-                    myChart.setOption(scope.options);
+                   if(scope.options){
+                       myChart.setOption(scope.options);
+                   }
+
                 }, true);
 
 
