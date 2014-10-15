@@ -11,12 +11,11 @@ define([
             template: '<div class="chart"></div>',
             replace: true,
             scope: {
-                "options": "=",
-                "height": "="
+                "options": "="
             },
-            link: function (scope, element) {
+            link: function (scope, element,attrs) {
                 //设置饼图高度
-                element[0].style.height = scope.height + "px";
+                element[0].style.height = attrs.height + "px";
 
                 // 基于准备好的dom，初始化echarts图表
                 var myChart = echarts.init(element[0]);
